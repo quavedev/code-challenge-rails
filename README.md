@@ -161,7 +161,6 @@ The frontend will be available at http://localhost:3000 and is configured to tal
 
 ```bash
 cd backend && bundle exec rubocop
-npm run quave-check   # runs prettier across JS/TS/CSS
 ```
 
 # AI Tools
