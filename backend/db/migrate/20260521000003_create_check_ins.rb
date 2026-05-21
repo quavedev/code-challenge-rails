@@ -1,4 +1,4 @@
-class CreateCheckIns < ActiveRecord::Migration[7.1]
+class CreateCheckIns < ActiveRecord::Migration[8.1]
   def change
     create_table :check_ins do |t|
       t.references :person, null: false, foreign_key: true

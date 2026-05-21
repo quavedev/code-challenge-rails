@@ -49,11 +49,11 @@ We want to see your React and Ruby skills.
 
 Your solution must use:
 - Frontend: React 18
-- Backend: Ruby on Rails 7 (API mode is fine)
-- Database: PostgreSQL
+- Backend: Ruby on Rails 8 (API mode is fine)
+- Database: SQLite (Rails 8 default)
 - Styling: Tailwind CSS
 - Ruby Dependency Management: Bundler
-- Ruby Code Style: RuboCop (default config)
+- Ruby Code Style: RuboCop (`rubocop-rails-omakase` defaults)
 
 The solution must:
 - Use the same data structure as the provided seed data (`backend/seed.json`)
@@ -93,7 +93,7 @@ The page should maintain an up-to-date view of the data, ensuring users see chan
 1. Use:
    - Ruby on Rails for the backend API
    - React for frontend views
-   - PostgreSQL for data
+   - SQLite for data
    - TailwindCSS for styling
    - Bundler for Ruby dependency management
 
@@ -109,7 +109,7 @@ The page should maintain an up-to-date view of the data, ensuring users see chan
 
 ```
 .
-├── backend/      # Rails 7 API (PostgreSQL, Bundler, RuboCop)
+├── backend/      # Rails 8 API (SQLite, Bundler, RuboCop)
 │   ├── app/
 │   ├── config/
 │   ├── db/
@@ -130,10 +130,9 @@ The page should maintain an up-to-date view of the data, ensuring users see chan
 
 - Ruby 3.2+ (3.3 recommended — see `backend/.ruby-version`)
 - Bundler (`gem install bundler`)
-- PostgreSQL 14+ running on `localhost:5432`
 - Node.js LTS (20+)
 
-If your local Postgres uses a non-default user/password, set `DATABASE_USER` / `DATABASE_PASSWORD` / `DATABASE_HOST` / `DATABASE_PORT` in your shell before running the backend commands below.
+SQLite is bundled — no separate database server to install or run.
 
 ## Backend
 

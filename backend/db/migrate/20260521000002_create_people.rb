@@ -1,4 +1,4 @@
-class CreatePeople < ActiveRecord::Migration[7.1]
+class CreatePeople < ActiveRecord::Migration[8.1]
   def change
     create_table :people do |t|
       t.references :community, null: false, foreign_key: true

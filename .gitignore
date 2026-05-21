@@ -13,6 +13,8 @@ backend/tmp/*
 !backend/tmp/.keep
 backend/storage/*
 !backend/storage/.keep
+backend/*.sqlite3
+backend/*.sqlite3-*
 backend/public/assets/
 backend/config/master.key
 backend/.byebug_history

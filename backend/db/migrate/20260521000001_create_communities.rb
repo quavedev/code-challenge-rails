@@ -1,4 +1,4 @@
-class CreateCommunities < ActiveRecord::Migration[7.1]
+class CreateCommunities < ActiveRecord::Migration[8.1]
   def change
     create_table :communities do |t|
       t.string :name, null: false

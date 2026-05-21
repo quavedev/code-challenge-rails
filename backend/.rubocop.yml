@@ -1,27 +1,10 @@
-require:
-  - rubocop-rails
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
 
 AllCops:
-  TargetRubyVersion: 3.2
-  NewCops: enable
   Exclude:
     - "bin/**/*"
     - "db/schema.rb"
     - "tmp/**/*"
     - "log/**/*"
     - "vendor/**/*"
-
-Style/Documentation:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Metrics/MethodLength:
-  Max: 25
-
-Metrics/BlockLength:
-  Exclude:
-    - "config/**/*"
-    - "db/migrate/*"
-    - "spec/**/*"
