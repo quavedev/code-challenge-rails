@@ -45,10 +45,10 @@ Our stack leverages React for the frontend, providing excellent component-based 
 
 ## Required Stack
 
-We want to see your React and Ruby skills.
+We want to see your Angular and Ruby skills.
 
 Your solution must use:
-- Frontend: React 18
+- Frontend: Angular 20 (standalone components, TypeScript)
 - Backend: Ruby on Rails 8 (API mode is fine)
 - Database: SQLite (Rails 8 default)
 - Styling: Tailwind CSS
@@ -86,13 +86,13 @@ Build a mini-app for event check-ins. The home page needs:
    - Company breakdown of current attendees
    - Number of people not checked in
 
-The page should maintain an up-to-date view of the data, ensuring users see changes promptly. You can poll, use Action Cable, or any other approach you prefer — explain your trade-offs in the cover letter.
+The page should maintain an up-to-date view of the data, ensuring users see changes promptly. You can poll, use Action Cable + an Angular WebSocket service, RxJS streams, or any other approach you prefer — explain your trade-offs in the cover letter.
 
 ## Implementation Rules
 
 1. Use:
    - Ruby on Rails for the backend API
-   - React for frontend views
+   - Angular for frontend views
    - SQLite for data
    - TailwindCSS for styling
    - Bundler for Ruby dependency management
@@ -118,8 +118,12 @@ The page should maintain an up-to-date view of the data, ensuring users see chan
 │   ├── seed.json          # shared fixture data
 │   ├── Gemfile
 │   └── ...
-└── frontend/     # React 18 + Vite + Tailwind
+└── frontend/     # Angular 20 + Tailwind CSS v4
     ├── src/
+    │   ├── app/             # standalone-component app
+    │   ├── styles.css       # @import "tailwindcss"
+    │   └── proxy.conf.json  # proxies /api and /health to :8000
+    ├── angular.json
     ├── package.json
     └── ...
 ```
@@ -155,7 +159,7 @@ npm install
 npm start
 ```
 
-The frontend will be available at http://localhost:3000 and is configured to talk to the backend on `http://localhost:8000`.
+The Angular dev server runs at http://localhost:3000. Requests to `/api/*` and `/health` are proxied to the Rails backend on `http://localhost:8000` (see `src/proxy.conf.json`), so the frontend can call `fetch('/api/communities')` directly with no CORS gymnastics during development.
 
 ## Linting
 
