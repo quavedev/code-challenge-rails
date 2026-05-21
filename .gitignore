@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Ruby / Rails
+backend/.bundle/
+backend/log/*
+!backend/log/.keep
+backend/tmp/*
+!backend/tmp/.keep
+backend/storage/*
+!backend/storage/.keep
+backend/public/assets/
+backend/config/master.key
+backend/.byebug_history
+backend/coverage/
+backend/spec/examples.txt
+backend/Gemfile.lock
+
+# Editors
+.idea/
+.vscode/
+
+# Frontend build output
+frontend/dist/
+frontend/.vite/
